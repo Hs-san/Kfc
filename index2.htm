@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="kfcmainicon.png">
+    <title>KFC Pakistan</title>
+    <style>
+          html,body{
+            margin: 0%;
+            padding: 0%;
+            height: 100%;
+            width: 100%;
+            background-color: #000000;
+            
+        } 
+        .navbar{
+            background-color: #000000;
+             height: 95px;
+             width: 100%; 
+             position: fixed;       
+             z-index: 1;
+        }
+        .logo{
+            display: inline-block;
+             position: relative;
+             top:10px;
+             left:40px 
+        }
+        .logo i{
+            font-size: 25px;
+             color: #fcfcfc;
+             position: relative;
+             top:6px;
+        }
+        .navimglogo{
+            position: relative;
+            top:15px;
+            margin-left: 20px;
+        }
+        .navdelivery{
+            margin-left: 20px;
+            height: 40px;
+            width: 143px;
+            display: inline-block;
+            background-color: #1c1816;
+            border: 2px solid #d70127;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;  
+        }
+        .navdelivery img{
+            height: 25px;
+            width: 25px;
+            position: relative;
+            top:7px;
+            margin-left: 25px;
+        }
+        .navdelivery a{
+            color: #fcfcfc;
+            margin-left: 5px;
+        }
+        .navpickup{
+            height: 42px;
+            width: 127px;
+            display: inline-block;
+            background-color: #1c1816;
+            border-radius: 5px;
+            margin-left: 8px;
+            font-size: 14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .navpickup img{
+            height: 25px;
+            width: 25px;
+            position: relative;
+            top:7px;
+            margin-left: 25px;
+        }
+        .navpickup a{
+            color: #fcfcfc;
+            font-weight: bolder;
+            margin-left: 5px;
+        }
+        .navlogin{
+            float: right;
+            position: relative;
+            left: 610px;
+            top:10px;
+        }
+        .navlogin img{
+            height: 50px; width: 70px;
+        }
+        .navlogin button{
+            height: 36px;
+            width: 64px;
+            background-color: #ea002a;
+            border: none;
+            position: relative;
+            top:-18px;
+            color: #fcfcfc;
+            font-size:14px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;
+            border-radius: 5px;
+        }
+        .reorder{
+            background-color: #ea002a;
+            color: #fcfcfc;
+            border: none;
+            font-size: 14px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+            font-weight: bolder;
+            height: 35px;
+            width: 541.8px;
+            padding: 6px 16px;
+            margin-left: 350px;
+            position: relative;
+            top:8px;
+            border-radius: 5px;
+        }
+        .exploremenuhr,.bestsellershr,.topdealshr{
+            border: 2px solid #ea002a ;
+            width: 67px;
+            position:relative;
+            left:-528px;
+            top:-18px
+        }
+        .yes{
+            display: inline-block;
+            height: 200px;
+            width: 188px;
+            background-color: #1c1816;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            transition: all 0.2s linear ;
+        }
+        .yes img{
+            height: 146px;
+            width: 180px; 
+        }
+        .hovert{
+            color: #fcfcfc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;
+            margin: 0;
+            margin-left: 45px;
+            font-size: 14px;
+        }
+          .yes div{
+            height: 17px;
+            width: 17px;
+            background-color: #000000;
+            border-radius: 50%;
+            margin-left: 165px;
+            margin-top: -10px;
+        }
+        .yes:hover{
+           transform: translateY(-10px);
+        }  
+       .flex2{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #000000;
+       }
+        .hovert1{
+        color: #fcfcfc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;
+            margin: 0;
+            margin-left: 30px;
+            font-size: 14px;
+       }
+       .hovert2{
+        color: #fcfcfc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;
+            margin: 0;
+            margin-left: 60px;
+            font-size: 14px;
+       }
+       .hovert3{
+        color: #fcfcfc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bolder;
+            margin: 0;
+            margin-left: 68px;
+            font-size: 14px;
+       }
+       .flex2hr{
+        border:2px solid red ;
+        width: 50px;
+        border-radius: 5px;
+       }
+       .bestsellers,.topdealshead,.exploremenu{
+        color: #fcfcfc;
+        margin-left: 67px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bolder;
+       }
+       .bestsellersburger{
+        display: inline-block;
+        height: 360px;
+        width: 300px;
+        background-color: #1c1816;
+        border-radius: 5px;
+       }
+       .bestsallerssmalldivs{
+        margin-left: 120px;
+       }
+       .bestsallerssmalldivs div{
+        display: inline-block;
+        height: 22px;
+        width: 15px;
+        margin-left: 2px;
+        background-color: #ea002a;
+        border-radius: 1px;
+        }
+        .bestsellersburger h6{
+             color: #fcfcfc;
+             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             font-size: 23px;
+             margin-left: 20px;
+             margin-top: 15px;
+             margin-bottom: 5px;
+        }
+        .priceribon{
+             height: 26px;
+            width: 75px;
+            background-color: #ea002a; 
+            float: right;
+            color: #ea002a;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding-left: 10px;
+            padding-bottom: 2px;
+        }
+        .priceribon h5{
+            color: #fcfcfc;
+            display: inline;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .rs1{
+            width: 13px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .p310{ 
+            width: 33px;
+            font-size: 20px;
+            font-weight: 900;
+        }
+       
+        .b6 img{
+          
+            height:290px;
+            width: 300px;
+        } 
+        .b6{
+            position: relative;
+            top:-50px;
+        }
+        .flexr2{
+            display: flex;
+            justify-content: space-evenly;
+            
+        } 
+        .topdeals{
+        display: inline-block;
+        height: 420px;
+         
+         width: 260px; 
+        
+        background-color: #1c1816;
+        border-radius: 10px;
+        
+        
+       }
+      .topdealssmalldivs{
+        margin-left: 95px;
+       }
+       .topdealssmalldivs div{
+        display: inline-block;
+        height: 22px;
+        width: 15px;
+        margin-left: 2px;
+        background-color: #ea002a;
+        border-radius: 1px;
+        }
+       .b10 img{
+          
+            height:240px;
+            width: 240px;
+            transition: all 0.4s ease  ;
+        } 
+        .topdeals:hover .b10 img{
+            transform: scale(1.06);
+        }
+        .topdealsheart{
+            color: #ea002a;
+             float: right;
+             position: relative;
+             right: 10px;top:-18px;
+             font-size: 24px;
+        }
+        .b10{
+            position: relative;
+            top:-50px;
+            left:10px;
+            
+        }
+        .burger10t{
+            color: #fcfcfc;
+            font-size: 18px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: -40px;
+            margin-left: 10px;
+            margin-bottom: 0;
+        }
+        .burger10p{
+            color: #fcfcfc;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 9px;
+            margin-right: 5px;
+            font-size: 15px;
+        }
+       
+        .topdealspeice{
+            color: #fcfcfc;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 9px;
+        }
+        .addtobucket{
+            width: 140px;
+            height: 35px;
+            background-color: #ea002a;
+            position: relative;
+            left:58px;
+            top:15px;
+            border-radius: 7px;
+            transition: all;
+        }
+        .addtobucket:hover{
+            background-color: #fcfcfc;
+            border: 1.4px solid #ea002a;
+            .addtobuckett,.plus{
+                color: #ea002a;
+
+            }
+        }
+        .addtobuckett{
+            color: #fcfcfc;
+            font-size: 14px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 900;
+            position: relative;
+            top:8px;
+            left:10px;
+            text-decoration: none;
+        }
+        .plus{
+            color: #fcfcfc;
+            font-size: 11px;
+            font-weight: 900;
+            position: relative;
+            top:8px;
+            left:10px;
+        }
+        .flextopdeals{
+            display: flex;
+            width: 1200px;
+            margin-left: 30px;
+            justify-content: space-evenly;
+        }
+        .containerbuttomimg{
+            margin-left: 60px;
+        }
+        .buttomimg1{
+           display: inline-block;
+           width: 546px;
+           height: 341px;
+           background-image: url(kfcbuttomimg1.png);
+           background-size:cover ;
+           border-radius:15px;
+        }
+        .buttomimg2{
+           display: inline-block;
+           width: 546px;
+           height: 341px;
+           background-image: url(kfcbuttomimg2.png);
+           background-size:cover ;
+           border-radius:15px;
+           margin-left: 20px;
+        }
+        .buttomimg3{
+           display: inline-block;
+           width: 546px;
+           height: 341px;
+           background-image: url(kfcbuttomimg3.jpg);
+           background-size:cover ;
+           border-radius:15px;
+           margin-top: 20px;
+        }
+        .buttomimg4{
+           display: inline-block;
+           border-radius:15px;
+           width: 546px;
+           height: 341px;
+           position: relative;
+           top:-55px;
+           left:20px;
+           background-color: #1c1816;
+        }
+        .buttominerimg4{
+          margin-left: 120px;
+          position: relative;
+          bottom: -15px;
+
+          
+        }
+        .buttominerimg4 img{
+            width: 300px;
+        }
+        .buttominerimg4  h5{
+            font-size: 21px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #ffffff;
+            position: relative;
+            left:-100px;
+            width: 550px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .buttominerimg4 button{
+            background-color: #ea002a;
+            border: none;
+            height:50px ;
+            width:220px ;
+            border-radius: 8px;
+            margin-left: 50px;
+        }
+        .buttominerimg4 button a{
+            text-decoration: none;
+            color: #ffffff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .footer{
+            width: 100%;
+            height: 317px;
+            background-color: #1c1816;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .socialcontainer{
+            height: 40px;
+            width: 1116px;
+            margin-bottom: 20px;
+            margin-left: 75px;  
+        }
+        .socialcontainer img{
+            margin-left: 390px;
+        }
+        .youtubediv{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            position: relative;top:-20px;
+            margin-left: 50px;
+        }
+        .youtubediv i{
+            color: #ea002a;
+            font-size: larger;
+            position: relative;
+            top:10px;
+            left:8px; 
+        }
+        .instadiv{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            position: relative;
+            top:-15px;
+            margin-left: 10px;
+        }
+        .instadiv i{
+            color: #2d2d2d;
+            font-size: 25px;
+            position: relative;
+            top:9px;
+            left:9px;
+            font-weight: 550;
+        }
+        .facebookdiv{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            position: relative;
+            top:-20px;
+            margin-left: 10px;
+        }
+        .facebookdiv i{
+            color: #3b5998;
+            font-size: larger;
+            position: relative;
+            top:10px;
+            left:13px
+        }
+        .footer2flex{
+            display: flex;
+            margin-left: 70px;
+
+        }
+        .footer2flex div{
+            width: 285px;
+            height: 201px;
+            display: inline-block;  
+        }
+        .footer2flex ul{
+            list-style-type: none;  
+        }
+        .footerul{
+            list-style-type: none;
+            font-size: 18px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+        }
+        .footerul li a{
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease-out  ;
+            
+        }
+        .footerul li{
+            margin-top: 10px;
+            
+           
+        }
+        .footerul li:hover  a{
+            color:#ea002a;
+        }
+        .kfcapplinkimg{
+            margin-left: 10px;
+            margin-top: 13px;
+        }
+        .footer2last{
+            width: 1140px;
+            height: 48px;
+            display: inline-block;
+            margin-left: 70px;
+        }
+        .footer2last h6{
+            display: inline;
+            color: #fcfcfc;
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: relative;
+            top:23px;
+        }
+        .footer2lastdiv2{
+            display: inline;
+            float: right;
+        }
+        .footer2lastdiv2 h1{
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #ea002a;
+        }
+        .footer2lastdiv2 a{
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 620;
+            color: #ffffff;
+        }
+        
+    
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <div class="logo" >
+            <i class="fa-sharp fa-solid fa-bars-staggered" ></i>
+            <img class="navimglogo"  src="kfclogo.png">
+            
+            <div class="navdelivery">
+                <img src="kfcbike.png">
+                <a>DELIVERY</a>
+            </div>
+            
+            <div class="navpickup">
+                <img  src="kfcpickup.png">
+                <a>PICKUP</a>
+            </div>
+            
+            <div class="navlogin">
+                <img src="kfccutbucket.png">
+                <button>LOGIN</button>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+    
+    <img style="width: 100%; height: 456px; " src="kfcslider.jpg"><br>
+    <button class="reorder">REORDER</button>
+    <br><br><br>
+    
+    <h2 class="exploremenu">EXPLORE MENU</h2>
+    <hr class="exploremenuhr"><br><br>
+    
+    <div class="flex2">
+        <div class="yes">
+            <img src="kfcburger1.png">
+            <h5 class="hovert">Everyday Value</h5>
+            <hr class="flex2hr">
+        </div>
+        <div class="yes">
+            <img src="kfcburger2.png">
+            <h5 class="hovert1">Ala-Carte-&-Combos</h5>
+            <hr class="flex2hr">
+        </div>
+        <div class="yes">
+            <img src="kfcburger3.png">
+            <h5 class="hovert2">Promotion</h5>
+            <hr class="flex2hr">
+        </div>
+        <div class="yes">
+            <img src="kfcburger4.png">
+            <h5 class="hovert">Signature-Boxes</h5>
+            <hr class="flex2hr">
+        </div>
+        <div class="yes">
+            <img src="kfcburger5.png">
+            <h5 class="hovert3">Sharing</h5>
+            <hr class="flex2hr">
+        </div>
+    </div>
+    <br><br>
+    
+    <h2 class="bestsellers">BEST SELLERS</h2>
+    <hr class="bestsellershr">
+    
+    <div class="flexr2">
+        <div class="bestsellersburger">
+            <div class="bestsallerssmalldivs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h6>Krunch Burger</h6>
+            <div class="priceribon">
+                <h5 class="rs1">Rs</h5><h5 class="p310">310</h5>
+            </div>
+            <div class="b6"><img src="kfcburger6.png"></div>
+        </div>
+        
+        <div class="bestsellersburger">
+            <div class="bestsallerssmalldivs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h6>Krunch Combo</h6>
+            <div class="priceribon">
+                <h5 class="rs1">Rs</h5><h5 class="p310">590</h5>
+            </div>
+            <div class="b6"><img src="kfcburger7.png"></div>
+        </div>
+        
+        <div class="bestsellersburger">
+            <div class="bestsallerssmalldivs">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h6>Chicken & Chips</h6>
+            <div class="priceribon">
+                <h5 class="rs1">Rs</h5><h5 class="p310">620</h5>
+            </div>
+            <div class="b6"><img src="kfcburger8.png"></div>
+        </div>
+    </div>
+    
+    <br><br>
+   
+      <h2 class="topdealshead">TOP DEALS</h2>
+<hr class="topdealshr">
+<div class="flextopdeals">
+    <div class="topdeals">
+        <div class="topdealssmalldivs">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <i class="fa-regular fa-heart topdealsheart"></i>
+        <div class="b10"><img src="kfcburger10.png"></div>
+        <h5 class="burger10t">Zinger Stacker Combo</h5>
+        <p class="burger10p">1 Zinger Stacker + 1 Regular fries + 1 Regular drink</p>
+        <h4 class="topdealspeice">Rs 950</h4>
+        <div class="addtobucket">
+            <a><i class="fa-sharp fa-solid fa-plus plus"></i></a>
+            <a href="#" class="addtobuckett">ADD TO BUCKET</a>
+        </div>
+    </div>
+
+    <div class="topdeals">
+        <div class="topdealssmalldivs">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <i class="fa-regular fa-heart topdealsheart"></i>
+        <div class="b10"><img src="kfcburger11.png"></div>
+        <h5 class="burger10t">Zinger Got Wings</h5>
+        <p class="burger10p">2 Zinger Burgers + 2 Regular Drinks + Wings Bucket (6 pcs)</p>
+        <h4 class="topdealspeice">Rs 1150</h4>
+        <div class="addtobucket">
+            <a><i class="fa-sharp fa-solid fa-plus plus"></i></a>
+            <a href="#" class="addtobuckett">ADD TO BUCKET</a>
+        </div>
+    </div>
+
+    <div class="topdeals">
+        <div class="topdealssmalldivs">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <i class="fa-regular fa-heart topdealsheart"></i>
+        <div class="b10"><img src="kfcburger12.png"></div>
+        <h5 class="burger10t">Crispy Duo Box</h5>
+        <p class="burger10p">Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 Large fries + 2...</p>
+        <h4 class="topdealspeice">Rs 1350</h4>
+        <div class="addtobucket">
+            <a><i class="fa-sharp fa-solid fa-plus plus"></i></a>
+            <a href="#" class="addtobuckett">ADD TO BUCKET</a>
+        </div>
+    </div>
+
+    <div class="topdeals">
+        <div class="topdealssmalldivs">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <i class="fa-regular fa-heart topdealsheart"></i>
+        <div class="b10"><img src="kfcburger13.png"></div>
+        <h5 class="burger10t">Family Festival 3</h5>
+        <p class="burger10p">An ultimate meal for the fam. It includes 4 Zinger burgers + 4...</p>
+        <h4 class="topdealspeice">Rs 2590</h4>
+        <div class="addtobucket">
+            <a><i class="fa-sharp fa-solid fa-plus plus"></i></a>
+            <a href="#" class="addtobuckett">ADD TO BUCKET</a>
+        </div>
+    </div>
+</div><br><br><br><br><br>
+<div class="containerbuttomimg">
+    <div class="buttomimg1"></div>
+    <div class="buttomimg2"></div>
+    <div class="buttomimg3"></div>
+    <div class="buttomimg4">
+        <div class="buttominerimg4"><img src="kfcbuttomimg4.png">
+         <h5>Adding 11 herbs and spices, Explore our menu and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add items to your cart.</h5>
+         <button><a href="#">EXPLORE MANU</a></button>
+        </div>
+    </div> 
+</div>
+<div class="footer">
+    <div class="socialcontainer">
+        
+        <img src="kfclogo.png">
+        <div class="youtubediv"><i  class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="instadiv"><i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="facebookdiv">
+            <i class="fa-brands fa-facebook-f"></i>
+        </div>
+
+        
+    </div>
+
+    <div class="footer2flex">
+        <div>
+            <ul class="footerul">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Mitao Bhook</a></li>
+                <li><a href="#">Mitao Bhook-Scholarship</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div >
+            <ul class="footerul">
+                <li class="footerulli"><a  href="#">Contact Us</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Track Order</a></li>
+                
+            </ul>
+        </div>
+        <div>
+            <ul class="footerul">
+                <li>
+                    <a href="#">Terms & Condition</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img class="kfcapplinkimg" src="kfcappstoreimg.png"><br>
+            <img class="kfcapplinkimg" src="kfcplaystoreimg.png">
+        </div>
+    </div>
+    <div class="footer2last">
+        <h6>
+            2024 KFC. All right reserved
+        </h6>
+        <div class="footer2lastdiv2">
+            <h1>
+                Made by
+            </h1>
+            <a href="#">Hassan raza</a>
+        </div>
+    </div>
+    
+</div>
+
+    
+    
+    
+</body>
+</html>
+
